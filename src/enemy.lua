@@ -19,7 +19,9 @@ function enemies:spawn(x, y, type) --spawning new enemies
     end
 
     function enemy:wander() --random movement when out of combat
-
+        --return to spawn point if away
+        --add wandering logic
+        self:setLinearVelocity(0, 0)
     end
     
     function enemy:search() --searching for player
