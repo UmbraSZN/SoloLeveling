@@ -61,7 +61,8 @@ function enemies:update(dt)
         if e:search() then
             local vx, vy = e:pathfinding()
             e:setLinearVelocity(vx * e.speed, vy * e.speed)
-            
+        else
+            e:wander()
         end
 
     end
